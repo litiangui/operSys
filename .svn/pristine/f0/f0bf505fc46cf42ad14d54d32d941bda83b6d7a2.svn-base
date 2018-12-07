@@ -1,0 +1,293 @@
+layui.use(['table', 'laytpl', 'form', 'common','upload','croppers'], function() {
+	var form = layui.form, laytpl = layui.laytpl, 
+	laytpl = layui.laytpl, upload = layui.upload,
+	table = layui.table,croppers = layui.croppers,common = layui.common;
+	
+	
+	$("select[url]").loadSelect();
+	var imageUrlJson=JSON.parse(imageUrl);
+	
+	
+    //页面关闭
+	$('#file').click(function(){  
+		$("#mainImg").attr("src",'');
+		if($("#imgPath").val()!=null&&$("#imgPath").val()!=''){
+			$("#mainImg").attr("src",$("#imgPath").val());
+		}
+	});
+	
+	var bFlag=0;
+    //创建一个头像上传组件
+    var croppersIndex= croppers.render({
+        elem: '#file'
+        ,saveW:150     //保存宽度
+        ,saveH:150
+        ,mark:1/1    //选取比例
+        ,area:['950px','650px']  //弹窗宽度
+        ,url: rootPath+'/mongo/brandclassificationrecommend/upload/'  //图片上传接口返回和（layui 的upload 模块）返回的JOSN一样
+        ,done: function(result){ //上传完毕回调
+        	console.info(result)
+            if(result.code == 0){
+                 layer.msg(result.msg);
+                 $("#imgPath").val(result.data.src);
+                 $("#imgDisplay").attr('src',result.data.src);
+     	    	$("#checkBigImg").attr("href",result.data.src);
+     			$("#imgDisplay").show();
+                 document.getElementById('closeBtn').click();
+             }else if(result.code ==1){
+                 layer.alert(result.msg,{icon: 2});
+             }
+        }
+    });
+    
+    
+
+    // 初始化编辑表单
+	form.render();
+	$("select[url]").loadSelect();
+	form.on('submit(submit)', function(data) {
+		//没有上传图片前
+		if(data.field.brandLogoImg==""){
+			layer.alert('请上传图片', {icon: 2}); 
+			return false;
+		}
+		if(bFlag==1){
+			layer.alert('请等待图片上传完成', {icon: 2}); 
+			return false;
+		}
+		common.wait("提交中...");
+		common.post(rootPath + '/mongo/brandclassificationrecommend/editSave', data.field, function(msg) {
+			common.hide();
+			if (msg.ok) {
+				// 提交成功刷新数据表格，关闭弹出层
+				layer.alert("操作成功。",function(){
+					layer.closeAll();
+					common.reloadTable(dataTable);
+				});
+			}else{
+				layer.alert(msg.msg);
+			}
+		});
+		return false;
+	});
+	form.verify({
+		pwd: [/.{6,}/, '请输入6-32位密码']
+	});
+	
+	// 初始化数据表格
+    var dataTable = common.renderTable({
+	    url: common.getUrl('/mongo/brandclassificationrecommend/list'),
+	    where:  $(".data-list-form").serializeJSON(),
+	    cols: [[
+	      {field:'id', title: 'ID', width:100, sort: true},
+	      {field:'brandName', title: '品牌名称', width: 250},
+	      {field:'sortNum', title: '排序', width: 120},
+	      {field:'modularName', title: '分类名称', width: 180},
+	      {field:'brandLogoImg', title: '图片', width: 120,templet:function(val){
+	    	  return "<img style='width: 50px; height: 30px;'" +
+	    	  				"src='"+val.brandLogoImg+"'>";
+	      }},
+	      {fixed: 'right',field:'brandRecommendStatus', title: '启用状态', width: 180,templet:'#isDisabledTpl'},
+	      {fixed: 'right',title: '操作',width: 280, align:'center', toolbar:'#editBar'}
+	    ]],
+    });
+    var editForm = $('.edit-form');
+	
+    
+    //-----------------------点击事件-----------------------------//
+    
+    
+    //页面关闭
+	$('.btn-close').click(function(){  
+		layer.closeAll();
+	});
+	
+	
+	//快速分类事件
+	$('#quickingClassification').click(function(){
+		
+		if($("#columnId").val()==null||$("#columnId").val()==''){
+			layer.alert("请选择要绑定的分类",{icon:2});
+			return false;
+		}
+		
+		layer.open({
+			title:'品牌快速分类',
+			type: 2,
+			area: ['1200px','650px'],
+			shadeClose: true,
+			content:rootPath + '/mongo/brandclassificationrecommend/quickingClassification?columnId='+$("#columnId").val()+'&modularName='+$("#columnId").find("option:selected").text()
+		});
+	});
+  	
+	var editForm = $('.edit-form'), roleForm = $('.role-form');
+    //监听工具条
+    table.on('tool(data-list)', function(obj){
+    	var data = obj.data;
+    	switch (obj.event) {
+		case 'edit':
+			layer.open({
+				title:'编辑',
+				type: 1,
+				area: ['420px','580px'],
+				content: editForm,
+				success: function(){
+						$("#imgDisplay").attr('src',"");
+						$("#imgDisplay").hide();
+						$("#checkBigImg").attr("href","");
+					if(data.brandLogoImg!=null&&data.brandLogoImg!=''){
+						$("#imgDisplay").attr('src',data.brandLogoImg);
+						$("#imgDisplay").show();
+						$("#checkBigImg").attr("href",data.brandLogoImg);
+					}
+					// 加载表单，重新渲染
+					editForm.loadData(data);
+					form.render();
+				}
+			});
+			break;
+		case 'look':
+			layer.open({
+				title:'详细',
+				type: 2,
+				area: ['600px','350px'],
+				shadeClose: true,
+				content:rootPath + '/mongo/brandclassificationrecommend/brandrecommendDetails?id='+data.id
+			});
+			break;
+		case 'jump':
+			window.open(data.jumpTarget);
+		break;
+		case 'delete':
+	   		layer.confirm("确定是否删除["+data.brandName+"]?",  {  
+  			  btn: ['确定','取消'] //按钮  
+  			  ,cancel: function(index, layero){  
+    		    	form.render();
+  			  }  
+  			}, function(confirmIndex){  
+      			common.post( rootPath + '/mongo/brandclassificationrecommend/delete', {id:data.id}, function(msg) {
+      				common.hide();
+      				if (msg.ok) {
+      					// 提交成功刷新数据表格，关闭弹出层
+      					layer.alert("操作成功。",function(){
+      						layer.closeAll();
+      						common.reloadTable(dataTable);
+      					});
+      				}else{
+      					layer.alert(msg.msg);
+      				}
+      			});
+      			layer.close(confirmIndex);
+  			}, function(){  //取消
+  		    	form.render();
+  			}); 
+			break;
+		case 'unbind':
+			if(data.modularName!=null&&data.modularName!=""){
+		   		layer.confirm("是否解除"+data.brandName+"与"+data.modularName+"模块的关系?",  {  
+		  			  btn: ['确定','取消'] //按钮  
+		  			  ,cancel: function(index, layero){  
+		    		    	form.render();
+		  			  }  
+		  			}, function(confirmIndex){  
+		      			common.post( rootPath + '/mongo/brandclassificationrecommend/unbind', {id:data.id}, function(msg) {
+		      				common.hide();
+		      				if (msg.ok) {
+		      					// 提交成功刷新数据表格，关闭弹出层
+		      					layer.alert("操作成功。",function(){
+		      						layer.closeAll();
+		      						common.reloadTable(dataTable);
+		      					});
+		      				}else{
+		      					layer.alert(msg.msg);
+		      				}
+		      			});
+		      			layer.close(confirmIndex);
+		  			}, function(){  //取消
+		  		    	form.render();
+		  			}); 
+			}else{
+				layer.alert("暂未绑定任何模块",{icon:2});
+			}
+			break;
+		default:
+			break;
+		}
+   });
+    
+    
+    
+    form.on('switch(isDisabledFilter)', function(obj){
+    	var isDisabledDom=obj.elem;
+        var p=isDisabledDom.parentNode.parentNode.parentNode;//获取单选框所在行的的tr节点;
+        var tmp= p.childNodes[1];
+    	var flag=obj.elem.checked;//flag=true即点击之前是未选中，flag=false即点击之前是已选中
+    	if(!flag){
+    		layer.confirm("确定是否禁用["+tmp.innerText+"]?",  {  
+    			  btn: ['确定','取消'] //按钮  
+    			  ,cancel: function(index, layero){  
+    				  obj.elem.checked=true;
+      		    	form.render();
+    			  }  
+    			}, function(confirmIndex){  
+        			common.post( rootPath + '/mongo/brandclassificationrecommend/updateBrandRecommendStatus', {id:obj.value,brandRecommendStatus:0}, function(msg) {
+        				common.hide();
+        				if (msg.ok) {
+        					// 提交成功刷新数据表格，关闭弹出层
+        					layer.alert("操作成功。",function(){
+        						layer.closeAll();
+        						common.reloadTable(dataTable);
+        					});
+        				}else{
+        					layer.alert(msg.msg);
+        				}
+        			});
+        			layer.close(confirmIndex);
+    			}, function(){  //取消
+    				 obj.elem.checked=true;
+    		    	form.render();
+    			});  
+    	}else{
+    		layer.confirm("确定是否启用["+tmp.innerText+"]?", {  
+  			  btn: ['确定','取消'] //按钮  
+  			  ,cancel: function(index, layero){  
+  			    //取消操作，点击右上角的X  
+  				 obj.elem.checked=false;
+   		    	form.render();
+  			  }  
+  			}, function(confirmIndex){  
+  			//是  		common.wait("提交中...");
+      			common.post( rootPath + '/mongo/brandclassificationrecommend/updateBrandRecommendStatus', {id:obj.value,brandRecommendStatus:1}, function(msg) {
+      				common.hide();
+      				if (msg.ok) {
+      					// 提交成功刷新数据表格，关闭弹出层
+      					layer.alert("操作成功。",function(){
+      						layer.closeAll();
+      						common.reloadTable(dataTable);
+      					});
+      				}else{
+      					layer.alert(msg.msg);
+      				}
+      			});
+      			layer.close(confirmIndex);
+  			}, function(){  //取消
+  				 obj.elem.checked=false;
+  		    	form.render();
+  			}); 
+    	}
+      });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+});

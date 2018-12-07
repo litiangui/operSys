@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shq.oper.mapper.primarydb.DeductibleMapper">
+
+
+	<!-- 获取抵扣券 -->
+	<select id="selectDeductible" resultType="Deductible">
+select t.* ,(select ti.discount from t_deductible_introduce ti where ti.is_disabled=false) as discount
+ from t_deductible t where user_seq= #{userSeq} and t.type=2
+
+
+	</select>
+
+    <!-- 使用抵扣券 -->
+    <update id="updateUserDeductible">
+		<![CDATA[
+		update t_deductible t
+			set t.status = #{status}
+			,t.update_time = now()
+			,t.used_balance = #{usedBalance}
+			,t.balance = #{balance}
+			where
+			 t.id = #{id}
+			and  now() BETWEEN t.validay_start and t.validay_end
+		]]>
+	</update>
+
+
+	<!--定时任务，优惠券过期 状态4过期 -->
+	<update id="updateDetuctibleStatusExpiredByJob">
+		<![CDATA[
+		update t_deductible t
+			set t.status = 4
+			,t.update_time = now()
+			,t.update_admin = 'system'
+			where
+			t.validay_end < #{expiredDay}
+			and (t.status = 1 or t.status = 2)
+		]]>
+	</update>
+
+
+</mapper>

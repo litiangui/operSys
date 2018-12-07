@@ -1,0 +1,21 @@
+package com.shq.oper.service.impl.primarydb;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.github.pagehelper.Page;
+import com.shq.oper.mapper.primarydb.PubliceNumMapper;
+import com.shq.oper.model.domain.primarydb.PubliceNum;
+import com.shq.oper.service.primarydb.PubliceNumService;
+
+@Service("publiceNumService")
+public class PubliceNumServiceImpl extends BaseServiceImpl<PubliceNum, Long> implements PubliceNumService {
+	
+	@Autowired
+	private PubliceNumMapper publiceNumMapper;
+
+	@Override
+	public Page<PubliceNum> queryAllPubliceNum(PubliceNum entity) {
+		return publiceNumMapper.queryAllPubliceNum(entity);
+	}
+}

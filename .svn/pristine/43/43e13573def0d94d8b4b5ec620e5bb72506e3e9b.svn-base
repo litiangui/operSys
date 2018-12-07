@@ -1,0 +1,228 @@
+package com.shq.oper.service.impl.primarydb;
+
+import com.shq.oper.mapper.mssqlshq.ShopperMapper;
+import com.shq.oper.mapper.primarydb.DeductibleMapper;
+import com.shq.oper.model.domain.mssqlshq.Shopper;
+import com.shq.oper.model.domain.primarydb.deductible.Deductible;
+import com.shq.oper.model.dto.Msg;
+import com.shq.oper.model.dto.api.req.BusinessParamDto;
+import com.shq.oper.model.dto.api.req.ReqUserCouponsBusinessDto;
+import com.shq.oper.model.dto.api.req.ReqUserCouponsDeductible;
+import com.shq.oper.plugin.SpringContextHolder;
+import com.shq.oper.service.primarydb.DeductibleService;
+import com.shq.oper.util.CacheKeyConstant;
+import com.shq.oper.util.DateUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @author: ltg
+ * @date: Created in 14:28 2018/11/17
+ */
+@Service("deductibleService")
+public class DeductibleServiceImpl extends BaseServiceImpl<Deductible, Long> implements DeductibleService {
+
+    @Autowired
+    private ShopperMapper shopperMapper;
+
+    @Autowired
+    private DeductibleMapper deductibleMapper;
+
+    @Override
+    public Msg<String> giftUserDeductible(ReqUserCouponsBusinessDto dto) {
+        List<BusinessParamDto> businessParamList=dto.getBusinessParam();
+        for (BusinessParamDto businessParamDto:businessParamList){
+            if (StringUtils.isEmpty(businessParamDto.getSeq())){
+                return Msg.error("参数错误，请输入seq");
+            }
+            if (StringUtils.isEmpty(businessParamDto.getCouponType())){
+                return Msg.error("参数错误，请输入优惠券类型");
+            }
+
+            BigDecimal big_decimal=new BigDecimal(businessParamDto.getAmount());
+            int r=big_decimal.compareTo(BigDecimal.ZERO); //和0，Zero比较
+            if (r<=0){
+                return Msg.error("金额参数错误，必须大于0");
+            }
+        }
+
+        LocalDateTime now=LocalDateTime.now();
+
+        List<Deductible> list=new ArrayList<>();
+        LocalDateTime begin = LocalDateTime.of(LocalDate.now(), LocalTime.MIN);
+
+        for (BusinessParamDto businessParamDto:businessParamList) {
+
+            if (businessParamDto.getCouponType().equals("1")){
+                Shopper shopperParam = new Shopper();
+                shopperParam.setSeq(Integer.parseInt(businessParamDto.getSeq()));
+                Shopper shopper = shopperMapper.selectOne(shopperParam);
+                if (null == shopper) {
+                    return Msg.error("查询不到seq" + businessParamDto.getSeq() + "为用户");
+                }
+
+                Deductible deductible = new Deductible();
+                deductible.setAmount(new BigDecimal(businessParamDto.getAmount()));
+                deductible.setBalance(new BigDecimal(businessParamDto.getAmount()));
+//                deductible.setBalance(BigDecimal.ZERO);
+                deductible.setCreateAdmin(dto.getFromSysCode());
+                deductible.setCreateTime(begin);
+                deductible.setStatus((short) 1);
+                deductible.setUpdateAdmin(dto.getFromSysCode());
+                deductible.setUpdateTime(begin);
+                deductible.setUsedBalance(BigDecimal.ZERO);
+                deductible.setUserSeq(businessParamDto.getSeq());
+                deductible.setValidayStart(begin);
+                deductible.setValidayEnd(begin.plusYears(100));
+                deductible.setType(1);
+                deductible.setIsLocking(1);
+
+                //清除CouponsUser-userSeq- 的缓存
+                SpringContextHolder.getBean(AdminServiceImpl.class).clearCacheByConstantKey(CacheKeyConstant.BASE_COUPONSUSER_USERSEQ+deductible.getUserSeq());
+                Deductible deductibleParam = new Deductible();
+                deductibleParam.setUserSeq(businessParamDto.getSeq());
+                deductibleParam.setType(1);
+                Deductible deductible1=deductibleMapper.selectOne(deductibleParam);
+                if (null==deductible1){
+                    list.add(deductible);
+                }else {
+                    deductible1.setUpdateTime(now);
+                    deductible1.setStatus((short)2);
+                    deductible1.setBalance(deductible1.getBalance().add(new BigDecimal(businessParamDto.getAmount())));
+                    deductible1.setAmount(deductible1.getAmount().add(new BigDecimal(businessParamDto.getAmount())));
+                    deductibleMapper.updateByPrimaryKey(deductible1);
+                    //清除CouponsUser-userSeq- 的缓存
+                    SpringContextHolder.getBean(AdminServiceImpl.class).clearCacheByConstantKey(CacheKeyConstant.BASE_COUPONSUSER_USERSEQ+deductible.getUserSeq());
+                    continue;
+                }
+            }
+            if (businessParamDto.getCouponType().equals("2")){
+                Shopper shopperParam = new Shopper();
+                shopperParam.setSeq(Integer.parseInt(businessParamDto.getSeq()));
+                Shopper shopper = shopperMapper.selectOne(shopperParam);
+                if (null == shopper) {
+                    return Msg.error("查询不到seq" + businessParamDto.getSeq() + "为用户");
+                }
+
+                Deductible deductible = new Deductible();
+                deductible.setAmount(new BigDecimal(businessParamDto.getAmount()));
+                deductible.setBalance(new BigDecimal(businessParamDto.getAmount()));
+                deductible.setCreateAdmin(dto.getFromSysCode());
+                deductible.setCreateTime(begin);
+                deductible.setStatus((short) 1);
+                deductible.setUpdateAdmin(dto.getFromSysCode());
+                deductible.setUpdateTime(begin);
+                deductible.setUsedBalance(BigDecimal.ZERO);
+                deductible.setUserSeq(businessParamDto.getSeq());
+                deductible.setValidayStart(begin);
+                deductible.setValidayEnd(begin.plusYears(1));
+                deductible.setType(2);
+                deductible.setIsLocking(1);
+
+                Deductible deductibleParam = new Deductible();
+                deductibleParam.setUserSeq(businessParamDto.getSeq());
+                deductibleParam.setType(2);
+
+                int i=deductibleMapper.selectCount(deductibleParam);
+                if (i==0){
+                    list.add(deductible);
+                    //清除CouponsUser-userSeq- 的缓存
+                    SpringContextHolder.getBean(AdminServiceImpl.class).clearCacheByConstantKey(CacheKeyConstant.BASE_COUPONSUSER_USERSEQ+deductible.getUserSeq());
+                }
+            }
+        }
+
+       if (list.size()>0){
+           deductibleMapper.insertList(list);
+           return Msg.ok("赠送券成功");
+       }else {
+           return Msg.ok("已赠送过券");
+       }
+    }
+
+    @Override
+    public Deductible getDeductible(String userSeq) {
+        return deductibleMapper.selectDeductible(userSeq);
+
+    }
+
+    @Override
+    public Msg<String> usedDeductible(ReqUserCouponsDeductible dto) {
+        LocalDateTime now=LocalDateTime.now();
+        Deductible deductibleParam=new Deductible();
+        deductibleParam.setId(dto.getCouponsUserId());
+        Deductible deductible= deductibleMapper.selectByPrimaryKey(dto.getCouponsUserId());
+        if (null==deductible){
+            return Msg.error("查询不到该抵扣券");
+        }
+
+        if (dto.getType()==1){
+            if (deductible.getBalance().compareTo(dto.getDeductibleAmount())==-1){
+                return Msg.error("抵扣金额超过限制");
+            }
+
+            switch (deductible.getStatus()){
+                case 3:return Msg.error("该券已用完");
+                case 4:return Msg.error("该券已过期");
+                case 5:return Msg.error("该券升级清空");
+            }
+
+            if (deductible.getValidayStart().isAfter(now)){
+                return Msg.error("该券没到使用期");
+            }
+            if (deductible.getValidayEnd().isBefore(now)){
+                return Msg.error("该券已过期");
+            }
+
+            //已抵扣金额
+            BigDecimal usedBalance=deductible.getUsedBalance().add(dto.getDeductibleAmount());
+            int r=usedBalance.compareTo(deductible.getAmount());
+            if (r==1){
+                return Msg.error("抵扣金额超过抵扣券金额");
+            }
+            if (r==0){
+                deductibleParam.setStatus((short)3);
+            }
+            if (r==-1){
+                deductibleParam.setStatus((short)2);
+            }
+            deductibleParam.setUsedBalance(usedBalance);
+            deductibleParam.setBalance(deductible.getAmount().subtract(usedBalance));
+        }else if(dto.getType()==2){
+            deductibleParam.setStatus((short)2);
+            deductibleParam.setBalance(deductible.getBalance().add(dto.getDeductibleAmount()));
+            deductibleParam.setUpdateTime(now);
+            deductibleParam.setUsedBalance(deductible.getUsedBalance().subtract(dto.getDeductibleAmount()));
+
+        }
+
+        int i=deductibleMapper.updateUserDeductible(deductibleParam);
+        if (i<=0){
+            return Msg.error("操作失败");
+        }else {
+            //清除CouponsUser-userSeq- 的缓存
+            SpringContextHolder.getBean(AdminServiceImpl.class).clearCacheByConstantKey(CacheKeyConstant.BASE_COUPONSUSER_USERSEQ+deductible.getUserSeq());
+            return Msg.ok("操作成功");
+        }
+    }
+
+    /**定时任务，抵扣券券过期 状态4过期**/
+    @Override
+    public Msg<String> updateDetuctibleStatusExpiredByJob(String expiredDay) {
+        int num = deductibleMapper.updateDetuctibleStatusExpiredByJob(expiredDay);
+//        if(num > 0) {
+//            //清除 deductible-userSeq-- 的缓存
+//            SpringContextHolder.getBean(AdminServiceImpl.class).clearCacheByConstantKey(CacheKeyConstant.BASE_DEDUCTIBLE_USERSEQ);
+//        }
+
+        return Msg.ok("过期优惠券["+num+"]条记录", "");
+    }
+}

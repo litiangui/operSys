@@ -1,0 +1,542 @@
+2018-12-07 09:49:05.520 [main] INFO  com.shq.oper.test.MongoDBTests - Starting MongoDBTests on 5ZMODJ6I58VZMWU with PID 45936 (started by Administrator in D:\project\operSys)
+2018-12-07 09:49:05.522 [main] DEBUG com.shq.oper.test.MongoDBTests - Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2018-12-07 09:49:05.523 [main] INFO  com.shq.oper.test.MongoDBTests - The following profiles are active: test
+2018-12-07 09:49:06.088 [main] INFO  o.s.w.context.support.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@31e75d13: startup date [Fri Dec 07 09:49:06 CST 2018]; root of context hierarchy
+2018-12-07 09:49:10.974 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-12-07 09:49:12.648 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-12-07 09:49:14.336 [main] INFO  o.s.b.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.session.RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]]
+2018-12-07 09:49:16.041 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$9be81d37] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-07 09:49:16.257 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d57c5f09] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-07 09:49:16.970 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$1e8e9527] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-07 09:49:18.195 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[192.168.1.43:30000], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-12-07 09:49:18.893 [cluster-ClusterId{value='5c09d19eda7380b3704e5fe6', description='null'}-192.168.1.43:30000] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:18149}] to 192.168.1.43:30000
+2018-12-07 09:49:18.904 [cluster-ClusterId{value='5c09d19eda7380b3704e5fe6', description='null'}-192.168.1.43:30000] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=192.168.1.43:30000, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 5]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2870598, setName='shqfxe', canonicalAddress=192.168.1.43:30000, hosts=[192.168.1.43:30000], passives=[], arbiters=[], primary='192.168.1.43:30000', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1, lastWriteDate=Fri Dec 07 09:53:34 CST 2018, lastUpdateTimeNanos=118923708521767}
+2018-12-07 09:49:20.219 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.AdminActionLog for index information.
+2018-12-07 09:49:20.233 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.GuestBrowsingLog for index information.
+2018-12-07 09:49:20.235 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.PriceReductionGoods for index information.
+2018-12-07 09:49:20.237 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.SelectionGoodsClass for index information.
+2018-12-07 09:49:20.238 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.channel.Model for index information.
+2018-12-07 09:49:20.238 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.wholesalebrand.WholesaleBrandRecommend for index information.
+2018-12-07 09:49:20.239 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.MongoDistributionOrders for index information.
+2018-12-07 09:49:20.244 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.ApiRequestDataLog for index information.
+2018-12-07 09:49:20.245 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.HomePageBanner for index information.
+2018-12-07 09:49:20.245 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.OrderDetail for index information.
+2018-12-07 09:49:20.245 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.channel.ActivityTemplate for index information.
+2018-12-07 09:49:20.247 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.channel.ChannelTemplate for index information.
+2018-12-07 09:49:20.248 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.channel.Goods for index information.
+2018-12-07 09:49:20.250 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.HomePageModule for index information.
+2018-12-07 09:49:20.254 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.brand.BrandSquareModular for index information.
+2018-12-07 09:49:20.255 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.AppDataStatistics for index information.
+2018-12-07 09:49:20.256 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.wholesalebrand.WholesaleIndustry for index information.
+2018-12-07 09:49:20.257 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.channel.ChannelBanner for index information.
+2018-12-07 09:49:20.258 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.OperSysSetting for index information.
+2018-12-07 09:49:20.260 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.AppLocationData for index information.
+2018-12-07 09:49:20.260 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.brand.BrandRecommend for index information.
+2018-12-07 09:49:20.261 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.wholesalebrand.WholesaleHotSaleGoods for index information.
+2018-12-07 09:49:20.262 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.HomePageModuleAttached for index information.
+2018-12-07 09:49:20.262 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.brand.HotSaleGoods for index information.
+2018-12-07 09:49:20.262 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.HomePageGroupItem for index information.
+2018-12-07 09:49:20.262 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.wholesalebrand.WholesaleBrandSquareBanner for index information.
+2018-12-07 09:49:20.263 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.HomePageGoods for index information.
+2018-12-07 09:49:20.263 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.brand.BrandSquareBanner for index information.
+2018-12-07 09:49:20.264 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.DeductibleUseDetail for index information.
+2018-12-07 09:49:20.264 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.DeducitbleStatisticsDay for index information.
+2018-12-07 09:49:20.265 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.ShippingAddress for index information.
+2018-12-07 09:49:20.266 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.wholesalebrand.WholesaleBrandSquareModular for index information.
+2018-12-07 09:49:21.251 [main] INFO  com.shq.oper.mapperds.DataSourcePrimary - ----------primaryDataSource--------------testDataSource---------------------
+2018-12-07 09:49:22.109 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-12-07 09:49:24.320 [main] INFO  c.shq.oper.mapperds.DataSource_SqlServer_shq520new - ----------shq520newDataSource--------------testDataSource---------------------
+2018-12-07 09:49:24.604 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2018-12-07 09:49:25.132 [main] INFO  com.shq.oper.mapperds.DataSource_SqlServer_shq520 - ----------shq520DataSource--------------testDataSource---------------------
+2018-12-07 09:49:25.453 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} inited
+2018-12-07 09:49:29.020 [main] WARN  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static fields: private static java.util.List com.shq.oper.controller.coupons.CouponsTypeRuleController.couponsTypeList
+2018-12-07 09:49:33.774 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-12-07 09:49:35.241 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@31e75d13: startup date [Fri Dec 07 09:49:06 CST 2018]; root of context hierarchy
+2018-12-07 09:49:35.516 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 09:49:35.518 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 09:49:35.535 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+2018-12-07 09:49:35.676 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 09:49:36.650 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-12-07 09:49:37.610 [main] DEBUG com.github.trang.druid.DruidStatConfiguration - druid web-stat-filter init...
+2018-12-07 09:49:37.685 [main] DEBUG com.github.trang.druid.DruidServletConfiguration - druid stat-view-servlet init...
+2018-12-07 09:49:37.721 [main] DEBUG com.github.trang.druid.DruidAutoConfiguration - druid stat-filter init...
+2018-12-07 09:49:39.550 [main] DEBUG com.github.trang.druid.DruidAutoConfiguration - druid wall-filter init...
+2018-12-07 09:49:45.615 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase -2147482648
+2018-12-07 09:49:45.616 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2018-12-07 09:49:45.617 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-12-07 09:49:45.680 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-12-07 09:49:45.734 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-12-07 09:49:46.148 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: cirCleApiUsingPOST_1
+2018-12-07 09:49:46.196 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-12-07 09:49:46.224 [main] DEBUG com.shq.oper.config.StartInitConfig - -----------------StartInitConfig----CacheKey------
+2018-12-07 09:49:46.386 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Inserting DBObject containing fields: [_class, _id, admin_id, admin_name, action, ref_action, ip, action_para, create_time] in collection: t_admin_action_log
+2018-12-07 09:49:46.391 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 09:49:46.474 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:18150}] to 192.168.1.43:30000
+2018-12-07 09:49:46.527 [main] DEBUG c.shq.oper.service.impl.primarydb.AdminServiceImpl - -----2018-12-07 09:49:46[清除所有缓存成功] 
+2018-12-07 09:49:46.573 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - findOne using query: { "showCode" : "com.shq.oper.model.domain.mongo.PriceReductionRules"} fields: null for class: class com.shq.oper.model.domain.mongo.OperSysSetting in collection: t_opersys_setting
+2018-12-07 09:49:46.577 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 09:49:46.578 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - findOne using query: { "showCode" : "com.shq.oper.model.domain.mongo.PriceReductionRules"} in db.collection: localQuickPurchase.t_opersys_setting
+2018-12-07 09:49:46.665 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.PriceReductionRules for index information.
+2018-12-07 09:49:46.677 [main] INFO  com.shq.oper.test.MongoDBTests - Started MongoDBTests in 44.18 seconds (JVM running for 47.713)
+2018-12-07 09:52:46.523 [pool-5-thread-1] DEBUG com.shq.oper.job.MessageStatusJob - -----------------变更信息状态开始----------2018-12-07 09:52:46
+2018-12-07 09:54:09.093 [Thread-4] INFO  o.s.w.context.support.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@31e75d13: startup date [Fri Dec 07 09:49:06 CST 2018]; root of context hierarchy
+2018-12-07 09:54:09.100 [Thread-4] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2018-12-07 09:54:09.115 [Thread-4] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase -2147482648
+2018-12-07 09:54:09.136 [Thread-4] INFO  c.s.o.s.impl.primarydb.GuestBrowsingLogServiceImpl - ----------------shutdown threadPool_Fixed
+2018-12-07 09:54:09.190 [pool-5-thread-1] ERROR o.s.s.support.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task.
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException
+### The error may exist in file [D:\project\operSys\target\classes\mappers\primarydb\MessageSendDetailMapper.xml]
+### The error may involve com.shq.oper.mapper.primarydb.MessageSendDetailMapper.selectCout
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:77)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy126.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:166)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:82)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy150.selectCout(Unknown Source)
+	at com.shq.oper.service.impl.primarydb.MessageSendDetailServiceImpl.batchUpdateMessageStatus(MessageSendDetailServiceImpl.java:50)
+	at com.shq.oper.service.impl.primarydb.MessageSendDetailServiceImpl$$FastClassBySpringCGLIB$$779166b7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:669)
+	at com.shq.oper.service.impl.primarydb.MessageSendDetailServiceImpl$$EnhancerBySpringCGLIB$$9b454e8c.batchUpdateMessageStatus(<generated>)
+	at com.shq.oper.job.MessageStatusJob.runByMin(MessageStatusJob.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:81)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException
+### The error may exist in file [D:\project\operSys\target\classes\mappers\primarydb\MessageSendDetailMapper.xml]
+### The error may involve com.shq.oper.mapper.primarydb.MessageSendDetailMapper.selectCout
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:150)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 26 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:82)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:68)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:84)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:143)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy211.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	... 33 common frames omitted
+Caused by: java.sql.SQLException: null
+	at com.alibaba.druid.pool.DruidDataSource.getConnectionInternal(DruidDataSource.java:1293)
+	at com.alibaba.druid.pool.DruidDataSource.getConnectionDirect(DruidDataSource.java:1149)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1129)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1119)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:104)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+	... 44 common frames omitted
+Caused by: java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2048)
+	at com.alibaba.druid.pool.DruidDataSource.takeLast(DruidDataSource.java:1683)
+	at com.alibaba.druid.pool.DruidDataSource.getConnectionInternal(DruidDataSource.java:1281)
+	... 50 common frames omitted
+2018-12-07 09:54:09.197 [Thread-4] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} closed
+2018-12-07 09:54:09.202 [Thread-4] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2018-12-07 09:54:09.208 [Thread-4] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2018-12-07 09:54:09.212 [Thread-4] INFO  org.mongodb.driver.connection - Closed connection [connectionId{localValue:2, serverValue:18150}] to 192.168.1.43:30000 because the pool has been closed.
+2018-12-07 09:59:45.294 [main] INFO  com.shq.oper.test.MongoDBTests - Starting MongoDBTests on 5ZMODJ6I58VZMWU with PID 11524 (started by Administrator in D:\project\operSys)
+2018-12-07 09:59:45.296 [main] DEBUG com.shq.oper.test.MongoDBTests - Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2018-12-07 09:59:45.297 [main] INFO  com.shq.oper.test.MongoDBTests - The following profiles are active: test
+2018-12-07 09:59:45.802 [main] INFO  o.s.w.context.support.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@31e75d13: startup date [Fri Dec 07 09:59:45 CST 2018]; root of context hierarchy
+2018-12-07 09:59:50.099 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-12-07 09:59:51.775 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-12-07 09:59:53.578 [main] INFO  o.s.b.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.session.RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]]
+2018-12-07 09:59:55.266 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$d0b1a319] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-07 09:59:55.413 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a45e4eb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-07 09:59:56.116 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$53581b09] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-07 09:59:57.078 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[192.168.1.43:30000], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-12-07 09:59:57.583 [cluster-ClusterId{value='5c09d41dda73802d04691478', description='null'}-192.168.1.43:30000] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:18154}] to 192.168.1.43:30000
+2018-12-07 09:59:57.588 [cluster-ClusterId{value='5c09d41dda73802d04691478', description='null'}-192.168.1.43:30000] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=192.168.1.43:30000, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 5]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1376728, setName='shqfxe', canonicalAddress=192.168.1.43:30000, hosts=[192.168.1.43:30000], passives=[], arbiters=[], primary='192.168.1.43:30000', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1, lastWriteDate=Fri Dec 07 10:04:14 CST 2018, lastUpdateTimeNanos=119562385707378}
+2018-12-07 09:59:58.848 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.AdminActionLog for index information.
+2018-12-07 09:59:58.862 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.channel.ActivityTemplate for index information.
+2018-12-07 09:59:58.865 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.ApiRequestDataLog for index information.
+2018-12-07 09:59:58.867 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.channel.ChannelTemplate for index information.
+2018-12-07 09:59:58.868 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.brand.BrandSquareBanner for index information.
+2018-12-07 09:59:58.869 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.wholesalebrand.WholesaleIndustry for index information.
+2018-12-07 09:59:58.869 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.brand.BrandSquareModular for index information.
+2018-12-07 09:59:58.870 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.AppDataStatistics for index information.
+2018-12-07 09:59:58.871 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.HomePageGroupItem for index information.
+2018-12-07 09:59:58.871 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.DeductibleUseDetail for index information.
+2018-12-07 09:59:58.872 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.wholesalebrand.WholesaleBrandSquareModular for index information.
+2018-12-07 09:59:58.873 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.ShippingAddress for index information.
+2018-12-07 09:59:58.874 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.channel.Model for index information.
+2018-12-07 09:59:58.874 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.AppLocationData for index information.
+2018-12-07 09:59:58.875 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.brand.BrandRecommend for index information.
+2018-12-07 09:59:58.875 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.MongoDistributionOrders for index information.
+2018-12-07 09:59:58.877 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.wholesalebrand.WholesaleBrandSquareBanner for index information.
+2018-12-07 09:59:58.878 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.OperSysSetting for index information.
+2018-12-07 09:59:58.878 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.OrderDetail for index information.
+2018-12-07 09:59:58.879 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.DeducitbleStatisticsDay for index information.
+2018-12-07 09:59:58.880 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.PriceReductionGoods for index information.
+2018-12-07 09:59:58.881 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.HomePageGoods for index information.
+2018-12-07 09:59:58.881 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.GuestBrowsingLog for index information.
+2018-12-07 09:59:58.882 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.SelectionGoodsClass for index information.
+2018-12-07 09:59:58.883 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.HomePageModuleAttached for index information.
+2018-12-07 09:59:58.884 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.HomePageBanner for index information.
+2018-12-07 09:59:58.884 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.HomePageModule for index information.
+2018-12-07 09:59:58.888 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.wholesalebrand.WholesaleHotSaleGoods for index information.
+2018-12-07 09:59:58.888 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.channel.ChannelBanner for index information.
+2018-12-07 09:59:58.889 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.wholesalebrand.WholesaleBrandRecommend for index information.
+2018-12-07 09:59:58.889 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.channel.Goods for index information.
+2018-12-07 09:59:58.890 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.brand.HotSaleGoods for index information.
+2018-12-07 09:59:59.781 [main] INFO  com.shq.oper.mapperds.DataSourcePrimary - ----------primaryDataSource--------------testDataSource---------------------
+2018-12-07 10:00:00.597 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-12-07 10:00:02.554 [main] INFO  c.shq.oper.mapperds.DataSource_SqlServer_shq520new - ----------shq520newDataSource--------------testDataSource---------------------
+2018-12-07 10:00:02.811 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2018-12-07 10:00:03.347 [main] INFO  com.shq.oper.mapperds.DataSource_SqlServer_shq520 - ----------shq520DataSource--------------testDataSource---------------------
+2018-12-07 10:00:03.636 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} inited
+2018-12-07 10:00:06.755 [main] WARN  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static fields: private static java.util.List com.shq.oper.controller.coupons.CouponsTypeRuleController.couponsTypeList
+2018-12-07 10:00:11.174 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-12-07 10:00:12.594 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@31e75d13: startup date [Fri Dec 07 09:59:45 CST 2018]; root of context hierarchy
+2018-12-07 10:00:12.859 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 10:00:12.861 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 10:00:12.876 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+2018-12-07 10:00:13.029 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 10:00:13.203 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-12-07 10:00:14.700 [main] DEBUG com.github.trang.druid.DruidStatConfiguration - druid web-stat-filter init...
+2018-12-07 10:00:14.781 [main] DEBUG com.github.trang.druid.DruidServletConfiguration - druid stat-view-servlet init...
+2018-12-07 10:00:14.816 [main] DEBUG com.github.trang.druid.DruidAutoConfiguration - druid stat-filter init...
+2018-12-07 10:00:16.710 [main] DEBUG com.github.trang.druid.DruidAutoConfiguration - druid wall-filter init...
+2018-12-07 10:00:23.238 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase -2147482648
+2018-12-07 10:00:23.241 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2018-12-07 10:00:23.242 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-12-07 10:00:23.303 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-12-07 10:00:23.354 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-12-07 10:00:23.838 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: cirCleApiUsingPOST_1
+2018-12-07 10:00:23.914 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-12-07 10:00:23.949 [main] DEBUG com.shq.oper.config.StartInitConfig - -----------------StartInitConfig----CacheKey------
+2018-12-07 10:00:24.135 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Inserting DBObject containing fields: [_class, _id, admin_id, admin_name, action, ref_action, ip, action_para, create_time] in collection: t_admin_action_log
+2018-12-07 10:00:24.141 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:00:24.219 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:18156}] to 192.168.1.43:30000
+2018-12-07 10:00:24.278 [main] DEBUG c.shq.oper.service.impl.primarydb.AdminServiceImpl - -----2018-12-07 10:00:24[清除所有缓存成功] 
+2018-12-07 10:00:24.324 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - findOne using query: { "showCode" : "com.shq.oper.model.domain.mongo.PriceReductionRules"} fields: null for class: class com.shq.oper.model.domain.mongo.OperSysSetting in collection: t_opersys_setting
+2018-12-07 10:00:24.329 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:00:24.329 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - findOne using query: { "showCode" : "com.shq.oper.model.domain.mongo.PriceReductionRules"} in db.collection: localQuickPurchase.t_opersys_setting
+2018-12-07 10:00:24.391 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.PriceReductionRules for index information.
+2018-12-07 10:00:24.400 [main] DEBUG com.shq.oper.config.StartInitConfig - -----------------App安装与启动次数统计修复开始----------2018-12-07 10:00:24
+2018-12-07 10:00:24.444 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-16T00:00" , "$lte" : "2018-11-16T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:00:24.445 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:34.905 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:34.979 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:35.021 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-17T00:00" , "$lte" : "2018-11-17T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:02:35.022 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:39.812 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:39.861 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:39.916 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-18T00:00" , "$lte" : "2018-11-18T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:02:39.916 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:39.929 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:39.963 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:39.966 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-19T00:00" , "$lte" : "2018-11-19T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:02:39.966 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:42.313 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:42.329 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:42.374 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-20T00:00" , "$lte" : "2018-11-20T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:02:42.375 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:44.711 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:44.728 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:44.785 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-21T00:00" , "$lte" : "2018-11-21T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:02:44.786 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:50.163 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:50.171 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:50.219 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-22T00:00" , "$lte" : "2018-11-22T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:02:50.219 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:53.240 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:53.246 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:53.250 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-23T00:00" , "$lte" : "2018-11-23T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:02:53.251 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:57.953 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:57.970 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:58.015 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-24T00:00" , "$lte" : "2018-11-24T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:02:58.015 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:58.028 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:58.089 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:58.092 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-25T00:00" , "$lte" : "2018-11-25T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:02:58.092 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:58.131 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:58.135 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:02:58.138 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-26T00:00" , "$lte" : "2018-11-26T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:02:58.138 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:02.826 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:02.850 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:02.901 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-27T00:00" , "$lte" : "2018-11-27T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:03:02.902 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:05.986 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:06.001 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:06.019 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-28T00:00" , "$lte" : "2018-11-28T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:03:06.019 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:11.106 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:11.136 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:11.139 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-29T00:00" , "$lte" : "2018-11-29T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:03:11.140 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:11.346 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:11.362 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:11.411 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Inserting DBObject containing fields: [_class, _id, installation_counts, startup_counts, instaCounts520, instaCounts360, instaCountBaidu, instaCountsTencent, instaCountSugou, instaCountHuawei, instaCountXiaomi, instaCountVivo, instaCountWandoujia, instaCountOPPO, instaCountJinli, instaCountIOS, create_time, check_create_time] in collection: t_app_data_statistics
+2018-12-07 10:03:11.411 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:11.424 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-30T00:00" , "$lte" : "2018-11-30T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:03:11.424 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:11.623 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:11.647 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:11.686 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-12-01T00:00" , "$lte" : "2018-12-01T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:03:11.687 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:12.314 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:12.370 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:12.399 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-12-02T00:00" , "$lte" : "2018-12-02T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:03:12.400 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:12.422 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:12.428 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:12.430 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-12-03T00:00" , "$lte" : "2018-12-03T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:03:12.430 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:12.706 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:12.720 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:12.721 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-12-04T00:00" , "$lte" : "2018-12-04T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:03:12.721 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:12.858 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:12.870 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:12.872 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Inserting DBObject containing fields: [_class, _id, installation_counts, startup_counts, instaCounts520, instaCounts360, instaCountBaidu, instaCountsTencent, instaCountSugou, instaCountHuawei, instaCountXiaomi, instaCountVivo, instaCountWandoujia, instaCountOPPO, instaCountJinli, instaCountIOS, create_time, check_create_time] in collection: t_app_data_statistics
+2018-12-07 10:03:12.873 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:12.876 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-12-05T00:00" , "$lte" : "2018-12-05T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:03:12.877 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:13.138 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:13.150 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:13.153 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-12-06T00:00" , "$lte" : "2018-12-06T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:03:13.153 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:13.638 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:13.644 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:13.647 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Inserting DBObject containing fields: [_class, _id, installation_counts, startup_counts, instaCounts520, instaCounts360, instaCountBaidu, instaCountsTencent, instaCountSugou, instaCountHuawei, instaCountXiaomi, instaCountVivo, instaCountWandoujia, instaCountOPPO, instaCountJinli, instaCountIOS, create_time, check_create_time] in collection: t_app_data_statistics
+2018-12-07 10:03:13.648 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:03:13.650 [main] DEBUG com.shq.oper.config.StartInitConfig - -----------------App安装与启动次数统计修复结束----------2018-12-07 10:03:13
+2018-12-07 10:03:13.652 [main] INFO  com.shq.oper.test.MongoDBTests - Started MongoDBTests in 209.433 seconds (JVM running for 212.251)
+2018-12-07 10:03:13.899 [Thread-4] INFO  o.s.w.context.support.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@31e75d13: startup date [Fri Dec 07 09:59:45 CST 2018]; root of context hierarchy
+2018-12-07 10:03:13.902 [Thread-4] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2018-12-07 10:03:13.906 [Thread-4] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase -2147482648
+2018-12-07 10:03:13.915 [Thread-4] INFO  c.s.o.s.impl.primarydb.GuestBrowsingLogServiceImpl - ----------------shutdown threadPool_Fixed
+2018-12-07 10:03:13.942 [Thread-4] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} closed
+2018-12-07 10:03:13.944 [Thread-4] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2018-12-07 10:03:13.948 [Thread-4] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2018-12-07 10:03:13.955 [Thread-4] INFO  org.mongodb.driver.connection - Closed connection [connectionId{localValue:2, serverValue:18156}] to 192.168.1.43:30000 because the pool has been closed.
+2018-12-07 10:04:06.696 [main] INFO  com.shq.oper.test.MongoDBTests - Starting MongoDBTests on 5ZMODJ6I58VZMWU with PID 44572 (started by Administrator in D:\project\operSys)
+2018-12-07 10:04:06.698 [main] DEBUG com.shq.oper.test.MongoDBTests - Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2018-12-07 10:04:06.699 [main] INFO  com.shq.oper.test.MongoDBTests - The following profiles are active: test
+2018-12-07 10:04:07.215 [main] INFO  o.s.w.context.support.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@31e75d13: startup date [Fri Dec 07 10:04:07 CST 2018]; root of context hierarchy
+2018-12-07 10:04:11.580 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-12-07 10:04:13.175 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-12-07 10:04:14.814 [main] INFO  o.s.b.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.session.RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]]
+2018-12-07 10:04:16.558 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$3a522fe6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-07 10:04:16.702 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$73e671b8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-07 10:04:17.372 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$bcf8a7d6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-07 10:04:18.381 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[192.168.1.43:30000], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-12-07 10:04:19.027 [cluster-ClusterId{value='5c09d522da7380ae1c6c63bc', description='null'}-192.168.1.43:30000] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:18161}] to 192.168.1.43:30000
+2018-12-07 10:04:19.033 [cluster-ClusterId{value='5c09d522da7380ae1c6c63bc', description='null'}-192.168.1.43:30000] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=192.168.1.43:30000, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 5]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1919435, setName='shqfxe', canonicalAddress=192.168.1.43:30000, hosts=[192.168.1.43:30000], passives=[], arbiters=[], primary='192.168.1.43:30000', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1, lastWriteDate=Fri Dec 07 10:08:33 CST 2018, lastUpdateTimeNanos=119823827957159}
+2018-12-07 10:04:20.193 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.wholesalebrand.WholesaleBrandRecommend for index information.
+2018-12-07 10:04:20.207 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.DeducitbleStatisticsDay for index information.
+2018-12-07 10:04:20.208 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.HomePageModuleAttached for index information.
+2018-12-07 10:04:20.209 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.brand.BrandSquareBanner for index information.
+2018-12-07 10:04:20.211 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.SelectionGoodsClass for index information.
+2018-12-07 10:04:20.211 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.channel.Model for index information.
+2018-12-07 10:04:20.211 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.ShippingAddress for index information.
+2018-12-07 10:04:20.213 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.channel.ChannelTemplate for index information.
+2018-12-07 10:04:20.217 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.OrderDetail for index information.
+2018-12-07 10:04:20.219 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.AdminActionLog for index information.
+2018-12-07 10:04:20.219 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.GuestBrowsingLog for index information.
+2018-12-07 10:04:20.222 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.channel.Goods for index information.
+2018-12-07 10:04:20.223 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.HomePageGoods for index information.
+2018-12-07 10:04:20.223 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.ApiRequestDataLog for index information.
+2018-12-07 10:04:20.224 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.channel.ActivityTemplate for index information.
+2018-12-07 10:04:20.225 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.MongoDistributionOrders for index information.
+2018-12-07 10:04:20.227 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.AppDataStatistics for index information.
+2018-12-07 10:04:20.228 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.DeductibleUseDetail for index information.
+2018-12-07 10:04:20.228 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.wholesalebrand.WholesaleHotSaleGoods for index information.
+2018-12-07 10:04:20.230 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.wholesalebrand.WholesaleBrandSquareModular for index information.
+2018-12-07 10:04:20.230 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.brand.BrandSquareModular for index information.
+2018-12-07 10:04:20.231 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.PriceReductionGoods for index information.
+2018-12-07 10:04:20.232 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.AppLocationData for index information.
+2018-12-07 10:04:20.232 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.HomePageModule for index information.
+2018-12-07 10:04:20.241 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.OperSysSetting for index information.
+2018-12-07 10:04:20.241 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.brand.HotSaleGoods for index information.
+2018-12-07 10:04:20.242 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.channel.ChannelBanner for index information.
+2018-12-07 10:04:20.243 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.HomePageBanner for index information.
+2018-12-07 10:04:20.243 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.brand.BrandRecommend for index information.
+2018-12-07 10:04:20.243 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.HomePageGroupItem for index information.
+2018-12-07 10:04:20.243 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.wholesalebrand.WholesaleIndustry for index information.
+2018-12-07 10:04:20.244 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.wholesalebrand.WholesaleBrandSquareBanner for index information.
+2018-12-07 10:04:21.163 [main] INFO  com.shq.oper.mapperds.DataSourcePrimary - ----------primaryDataSource--------------testDataSource---------------------
+2018-12-07 10:04:22.061 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-12-07 10:04:23.994 [main] INFO  c.shq.oper.mapperds.DataSource_SqlServer_shq520new - ----------shq520newDataSource--------------testDataSource---------------------
+2018-12-07 10:04:24.265 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2018-12-07 10:04:24.827 [main] INFO  com.shq.oper.mapperds.DataSource_SqlServer_shq520 - ----------shq520DataSource--------------testDataSource---------------------
+2018-12-07 10:04:25.115 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} inited
+2018-12-07 10:04:28.317 [main] WARN  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static fields: private static java.util.List com.shq.oper.controller.coupons.CouponsTypeRuleController.couponsTypeList
+2018-12-07 10:04:32.705 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-12-07 10:04:34.118 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@31e75d13: startup date [Fri Dec 07 10:04:07 CST 2018]; root of context hierarchy
+2018-12-07 10:04:34.384 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 10:04:34.385 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 10:04:34.401 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+2018-12-07 10:04:34.534 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 10:04:35.274 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-12-07 10:04:36.293 [main] DEBUG com.github.trang.druid.DruidStatConfiguration - druid web-stat-filter init...
+2018-12-07 10:04:36.392 [main] DEBUG com.github.trang.druid.DruidServletConfiguration - druid stat-view-servlet init...
+2018-12-07 10:04:36.428 [main] DEBUG com.github.trang.druid.DruidAutoConfiguration - druid stat-filter init...
+2018-12-07 10:04:38.164 [main] DEBUG com.github.trang.druid.DruidAutoConfiguration - druid wall-filter init...
+2018-12-07 10:04:44.315 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase -2147482648
+2018-12-07 10:04:44.316 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2018-12-07 10:04:44.317 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-12-07 10:04:44.378 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-12-07 10:04:44.431 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-12-07 10:04:44.857 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: cirCleApiUsingPOST_1
+2018-12-07 10:04:44.899 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-12-07 10:04:44.924 [main] DEBUG com.shq.oper.config.StartInitConfig - -----------------StartInitConfig----CacheKey------
+2018-12-07 10:04:45.074 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Inserting DBObject containing fields: [_class, _id, admin_id, admin_name, action, ref_action, ip, action_para, create_time] in collection: t_admin_action_log
+2018-12-07 10:04:45.079 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:04:45.162 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:18162}] to 192.168.1.43:30000
+2018-12-07 10:04:45.210 [main] DEBUG c.shq.oper.service.impl.primarydb.AdminServiceImpl - -----2018-12-07 10:04:45[清除所有缓存成功] 
+2018-12-07 10:04:45.253 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - findOne using query: { "showCode" : "com.shq.oper.model.domain.mongo.PriceReductionRules"} fields: null for class: class com.shq.oper.model.domain.mongo.OperSysSetting in collection: t_opersys_setting
+2018-12-07 10:04:45.256 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:04:45.257 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - findOne using query: { "showCode" : "com.shq.oper.model.domain.mongo.PriceReductionRules"} in db.collection: localQuickPurchase.t_opersys_setting
+2018-12-07 10:04:45.327 [main] DEBUG o.s.d.m.c.index.MongoPersistentEntityIndexCreator - Analyzing class class com.shq.oper.model.domain.mongo.PriceReductionRules for index information.
+2018-12-07 10:04:45.338 [main] DEBUG com.shq.oper.config.StartInitConfig - -----------------App安装与启动次数统计修复开始----------2018-12-07 10:04:45
+2018-12-07 10:04:45.377 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-16T00:00" , "$lte" : "2018-11-16T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:04:45.378 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:32.091 [pool-5-thread-1] DEBUG com.shq.oper.job.MessageStatusJob - -----------------变更信息状态开始----------2018-12-07 10:05:32
+2018-12-07 10:05:32.104 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:32.187 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:32.208 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-17T00:00" , "$lte" : "2018-11-17T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:32.208 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:33.218 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:33.234 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:33.236 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-18T00:00" , "$lte" : "2018-11-18T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:33.237 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:33.247 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:33.262 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:33.265 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-19T00:00" , "$lte" : "2018-11-19T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:33.265 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:33.930 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:33.945 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:33.948 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-20T00:00" , "$lte" : "2018-11-20T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:33.948 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:34.330 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:34.344 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:34.346 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-21T00:00" , "$lte" : "2018-11-21T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:34.347 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:35.043 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:35.056 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:35.058 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-22T00:00" , "$lte" : "2018-11-22T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:35.058 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:35.658 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:35.672 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:35.675 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-23T00:00" , "$lte" : "2018-11-23T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:35.675 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:36.373 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:36.386 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:36.388 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-24T00:00" , "$lte" : "2018-11-24T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:36.389 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:36.393 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:36.398 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:36.400 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-25T00:00" , "$lte" : "2018-11-25T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:36.400 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:36.404 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:36.412 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:36.414 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-26T00:00" , "$lte" : "2018-11-26T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:36.414 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:37.026 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:37.041 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:37.045 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-27T00:00" , "$lte" : "2018-11-27T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:37.045 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:37.749 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:37.764 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:37.766 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-28T00:00" , "$lte" : "2018-11-28T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:37.766 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:37.820 [pool-5-thread-1] DEBUG c.s.o.m.p.MessageSendDetailMapper.selectCout - ==>  Preparing: select count(id) from t_msg_send_detail t where send_status=0 and send_time between ? and ? 
+2018-12-07 10:05:38.415 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:38.421 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:38.424 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-29T00:00" , "$lte" : "2018-11-29T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:38.424 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:38.738 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:38.741 [pool-5-thread-1] DEBUG c.s.o.m.p.MessageSendDetailMapper.selectCout - ==> Parameters: 2018-12-06 00:00:00.107(Timestamp), 2018-12-07 23:59:59.107(Timestamp)
+2018-12-07 10:05:38.766 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:38.798 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Inserting DBObject containing fields: [_class, _id, installation_counts, startup_counts, instaCounts520, instaCounts360, instaCountBaidu, instaCountsTencent, instaCountSugou, instaCountHuawei, instaCountXiaomi, instaCountVivo, instaCountWandoujia, instaCountOPPO, instaCountJinli, instaCountIOS, create_time, check_create_time] in collection: t_app_data_statistics
+2018-12-07 10:05:38.799 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:38.803 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-11-30T00:00" , "$lte" : "2018-11-30T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:38.803 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:38.818 [pool-5-thread-1] DEBUG c.s.o.m.p.MessageSendDetailMapper.selectCout - <==      Total: 1
+2018-12-07 10:05:38.822 [pool-5-thread-1] DEBUG c.s.o.s.i.primarydb.MessageSendDetailServiceImpl - ----短信发送中记录条目数：30
+2018-12-07 10:05:38.823 [pool-5-thread-1] DEBUG c.s.o.m.p.MessageSendDetailMapper.queryMessage - ==>  Preparing: select * from t_msg_send_detail t where t.send_status=0 and t.send_time between ? and ? order by t.send_time desc limit 2000 
+2018-12-07 10:05:38.823 [pool-5-thread-1] DEBUG c.s.o.m.p.MessageSendDetailMapper.queryMessage - ==> Parameters: 2018-12-06 00:00:00.107(Timestamp), 2018-12-07 23:59:59.107(Timestamp)
+2018-12-07 10:05:39.065 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:39.077 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:39.080 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-12-01T00:00" , "$lte" : "2018-12-01T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:39.080 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:39.442 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:39.449 [pool-5-thread-1] DEBUG c.s.o.m.p.MessageSendDetailMapper.queryMessage - <==      Total: 30
+2018-12-07 10:05:39.455 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:39.457 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-12-02T00:00" , "$lte" : "2018-12-02T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:39.457 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:39.461 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:39.468 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:39.470 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-12-03T00:00" , "$lte" : "2018-12-03T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:39.470 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:40.130 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:40.137 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:40.139 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-12-04T00:00" , "$lte" : "2018-12-04T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:40.139 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:40.578 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:40.594 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:40.597 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Inserting DBObject containing fields: [_class, _id, installation_counts, startup_counts, instaCounts520, instaCounts360, instaCountBaidu, instaCountsTencent, instaCountSugou, instaCountHuawei, instaCountXiaomi, instaCountVivo, instaCountWandoujia, instaCountOPPO, instaCountJinli, instaCountIOS, create_time, check_create_time] in collection: t_app_data_statistics
+2018-12-07 10:05:40.598 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:40.601 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-12-05T00:00" , "$lte" : "2018-12-05T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:40.602 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:40.961 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:40.974 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:40.977 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Executing aggregation: { "aggregate" : "t_app_location_data" , "pipeline" : [ { "$match" : { "createTime" : { "$gte" : "2018-12-06T00:00" , "$lte" : "2018-12-06T23:59:59"} , "isInstallStartUp" : true}} , { "$group" : { "_id" : "$channel" , "count" : { "$sum" : 1}}}]}
+2018-12-07 10:05:40.977 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:41.299 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:41.324 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:41.327 [main] DEBUG o.springframework.data.mongodb.core.MongoTemplate - Inserting DBObject containing fields: [_class, _id, installation_counts, startup_counts, instaCounts520, instaCounts360, instaCountBaidu, instaCountsTencent, instaCountSugou, instaCountHuawei, instaCountXiaomi, instaCountVivo, instaCountWandoujia, instaCountOPPO, instaCountJinli, instaCountIOS, create_time, check_create_time] in collection: t_app_data_statistics
+2018-12-07 10:05:41.328 [main] DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[localQuickPurchase]
+2018-12-07 10:05:41.329 [main] DEBUG com.shq.oper.config.StartInitConfig - -----------------App安装与启动次数统计修复结束----------2018-12-07 10:05:41
+2018-12-07 10:05:41.332 [main] INFO  com.shq.oper.test.MongoDBTests - Started MongoDBTests in 95.673 seconds (JVM running for 98.549)
+2018-12-07 10:05:41.436 [pool-5-thread-1] DEBUG c.s.o.s.i.primarydb.MessageSendDetailServiceImpl - ----更新记录条目数：28
+2018-12-07 10:05:47.650 [Thread-4] INFO  o.s.w.context.support.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@31e75d13: startup date [Fri Dec 07 10:04:07 CST 2018]; root of context hierarchy
+2018-12-07 10:05:47.659 [pool-5-thread-1] DEBUG c.s.o.m.p.MessageSendDetailMapper.batchUpdate - ==>  Preparing: update t_msg_send_detail set send_status= case msg_id when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? end ,finish_time= case msg_id when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? end ,remark= case msg_id when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? end ,message_return_type= case msg_id when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? when ? then ? end where msg_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+2018-12-07 10:05:47.665 [Thread-4] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2018-12-07 10:05:47.677 [Thread-4] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase -2147482648
+2018-12-07 10:05:47.690 [Thread-4] INFO  c.s.o.s.impl.primarydb.GuestBrowsingLogServiceImpl - ----------------shutdown threadPool_Fixed
+2018-12-07 10:05:47.708 [pool-5-thread-1] DEBUG c.s.o.m.p.MessageSendDetailMapper.batchUpdate - ==> Parameters: 468330575987920963(Long), 0(Short), 468339012155735738(Long), 0(Short), 468343669749347214(Long), 0(Short), 468348901865365550(Long), 0(Short), 468360877772386343(Long), 0(Short), 468378401392236220(Long), 0(Short), 468381449623060551(Long), 0(Short), 468392832736147036(Long), 0(Short), 468459148874958044(Long), 0(Short), 468459161357386068(Long), 0(Short), 468459189653670573(Long), 0(Short), 468469609744097667(Long), 0(Short), 468477559403487046(Long), 0(Short), 468480855427109493(Long), 0(Short), 468484330147952612(Long), 0(Short), 468484362805543364(Long), 0(Short), 468495138995981725(Long), 0(Short), 468495171532603039(Long), 0(Short), 468500308522837002(Long), 0(Short), 468647087563437153(Long), 0(Short), 468835834378420234(Long), 0(Short), 468848822815035015(Long), 0(Short), 468992530558757262(Long), 0(Short), 469133471308041487(Long), 0(Short), 469326401882844854(Long), 0(Short), 470027375930104216(Long), 0(Short), 470108268131762234(Long), 0(Short), 472306255508196254(Long), 0(Short), 468330575987920963(Long), 2018-12-06 00:07:56.0(Timestamp), 468339012155735738(Long), 2018-12-06 00:09:20.0(Timestamp), 468343669749347214(Long), 2018-12-06 00:10:07.0(Timestamp), 468348901865365550(Long), 2018-12-06 00:10:59.0(Timestamp), 468360877772386343(Long), 2018-12-06 00:12:59.0(Timestamp), 468378401392236220(Long), 2018-12-06 00:15:55.0(Timestamp), 468381449623060551(Long), 2018-12-06 00:16:24.0(Timestamp), 468392832736147036(Long), 2018-12-06 00:18:18.0(Timestamp), 468459148874958044(Long), 2018-12-06 00:29:22.0(Timestamp), 468459161357386068(Long), 2018-12-06 00:29:22.0(Timestamp), 468459189653670573(Long), 2018-12-06 00:29:22.0(Timestamp), 468469609744097667(Long), 2018-12-06 00:31:06.0(Timestamp), 468477559403487046(Long), 2018-12-06 00:32:26.0(Timestamp), 468480855427109493(Long), 2018-12-06 00:32:59.0(Timestamp), 468484330147952612(Long), 2018-12-06 00:33:33.0(Timestamp), 468484362805543364(Long), 2018-12-06 00:33:34.0(Timestamp), 468495138995981725(Long), 2018-12-06 00:35:21.0(Timestamp), 468495171532603039(Long), 2018-12-06 00:35:22.0(Timestamp), 468500308522837002(Long), 2018-12-06 00:36:13.0(Timestamp), 468647087563437153(Long), 2018-12-06 01:00:41.0(Timestamp), 468835834378420234(Long), 2018-12-06 01:32:08.0(Timestamp), 468848822815035015(Long), 2018-12-06 01:34:18.0(Timestamp), 468992530558757262(Long), 2018-12-06 01:58:25.0(Timestamp), 469133471308041487(Long), 2018-12-06 02:21:55.0(Timestamp), 469326401882844854(Long), 2018-12-06 02:53:54.0(Timestamp), 470027375930104216(Long), 2018-12-06 04:50:44.0(Timestamp), 470108268131762234(Long), 2018-12-06 05:04:13.0(Timestamp), 472306255508196254(Long), 2018-12-06 11:10:32.0(Timestamp), 468330575987920963(Long), null, 468339012155735738(Long), null, 468343669749347214(Long), null, 468348901865365550(Long), null, 468360877772386343(Long), null, 468378401392236220(Long), null, 468381449623060551(Long), null, 468392832736147036(Long), null, 468459148874958044(Long), null, 468459161357386068(Long), null, 468459189653670573(Long), null, 468469609744097667(Long), null, 468477559403487046(Long), null, 468480855427109493(Long), null, 468484330147952612(Long), null, 468484362805543364(Long), null, 468495138995981725(Long), null, 468495171532603039(Long), null, 468500308522837002(Long), null, 468647087563437153(Long), null, 468835834378420234(Long), null, 468848822815035015(Long), null, 468992530558757262(Long), null, 469133471308041487(Long), null, 469326401882844854(Long), null, 470027375930104216(Long), null, 470108268131762234(Long), null, 472306255508196254(Long), null, 468330575987920963(Long), 1(String), 468339012155735738(Long), 1(String), 468343669749347214(Long), 1(String), 468348901865365550(Long), 1(String), 468360877772386343(Long), 1(String), 468378401392236220(Long), 1(String), 468381449623060551(Long), 1(String), 468392832736147036(Long), 1(String), 468459148874958044(Long), 1(String), 468459161357386068(Long), 1(String), 468459189653670573(Long), 1(String), 468469609744097667(Long), 1(String), 468477559403487046(Long), 1(String), 468480855427109493(Long), 1(String), 468484330147952612(Long), 1(String), 468484362805543364(Long), 1(String), 468495138995981725(Long), 1(String), 468495171532603039(Long), 1(String), 468500308522837002(Long), 1(String), 468647087563437153(Long), 1(String), 468835834378420234(Long), 1(String), 468848822815035015(Long), 1(String), 468992530558757262(Long), 1(String), 469133471308041487(Long), 1(String), 469326401882844854(Long), 1(String), 470027375930104216(Long), 1(String), 470108268131762234(Long), 1(String), 472306255508196254(Long), 1(String), 468330575987920963(Long), 468339012155735738(Long), 468343669749347214(Long), 468348901865365550(Long), 468360877772386343(Long), 468378401392236220(Long), 468381449623060551(Long), 468392832736147036(Long), 468459148874958044(Long), 468459161357386068(Long), 468459189653670573(Long), 468469609744097667(Long), 468477559403487046(Long), 468480855427109493(Long), 468484330147952612(Long), 468484362805543364(Long), 468495138995981725(Long), 468495171532603039(Long), 468500308522837002(Long), 468647087563437153(Long), 468835834378420234(Long), 468848822815035015(Long), 468992530558757262(Long), 469133471308041487(Long), 469326401882844854(Long), 470027375930104216(Long), 470108268131762234(Long), 472306255508196254(Long)
+2018-12-07 10:05:47.711 [Thread-4] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} closed
+2018-12-07 10:05:47.716 [Thread-4] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2018-12-07 10:05:47.719 [Thread-4] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2018-12-07 10:05:47.722 [Thread-4] INFO  org.mongodb.driver.connection - Closed connection [connectionId{localValue:2, serverValue:18162}] to 192.168.1.43:30000 because the pool has been closed.
+2018-12-07 10:05:47.724 [pool-5-thread-1] DEBUG c.s.o.m.p.MessageSendDetailMapper.batchUpdate - <==    Updates: 28
+2018-12-07 10:05:47.727 [pool-5-thread-1] DEBUG com.shq.oper.job.MessageStatusJob - -----------------变更信息状态结束----------2018-12-07 10:05:47

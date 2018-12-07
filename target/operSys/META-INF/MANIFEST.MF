@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: operSys
+Implementation-Version: 1.0.1
+Built-By: Administrator
+Implementation-Vendor-Id: com.shq
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_31
+Main-Class: ${start-class}
+

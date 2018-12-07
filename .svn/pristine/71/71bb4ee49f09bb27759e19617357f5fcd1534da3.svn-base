@@ -1,0 +1,44 @@
+package com.shq.oper.model.dto.api.orderingsystem;
+
+import java.io.Serializable;
+
+import io.swagger.annotations.ApiModel;
+
+@ApiModel(value = "订货系统品牌广场DTO")
+@lombok.Data
+public class OSBrasndSquareDto implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	
+	private String FromTable="BusinessStores";
+	
+	
+	/**
+	 * id
+	 */
+	private Long id;
+
+	/**
+	 * 名称
+	 */
+	private String StoresName;
+	/**
+	 * 图片地址
+	 */
+	private String StoresUrl;
+	/**
+	 * 跳转地址
+	 */
+	private String ContentUrl;
+
+	/**
+	 * 标志
+	 */
+	private Long DealerId;
+
+	/*
+	 * 排序
+	 */
+	private String Sort;
+
+}
